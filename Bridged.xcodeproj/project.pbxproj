@@ -10,6 +10,15 @@
 		04745ABB1ED3594B00EEA5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */; };
 		04745ABD1ED3594B00EEA5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04745ABC1ED3594B00EEA5CF /* Assets.xcassets */; };
 		04745AC01ED3594B00EEA5CF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04745ABE1ED3594B00EEA5CF /* MainMenu.xib */; };
+		04745AC81ED35D8700EEA5CF /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745AC71ED35D8700EEA5CF /* StatusMenuController.swift */; };
+		04F12F7E1ED3610800772904 /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = 04F12F7D1ED3610800772904 /* Scripts */; };
+		04F12F801ED3616F00772904 /* ShellHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F7F1ED3616F00772904 /* ShellHandler.swift */; };
+		04F12F861ED39C9300772904 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F851ED39C9300772904 /* C.swift */; };
+		04F12F881ED39DE600772904 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F871ED39DE600772904 /* Device.swift */; };
+		04F12F8A1ED40FBA00772904 /* ApkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F891ED40FBA00772904 /* ApkHandler.swift */; };
+		04F12F8C1ED40FFF00772904 /* Apk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F8B1ED40FFF00772904 /* Apk.swift */; };
+		04F12F8E1ED4116D00772904 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F8D1ED4116D00772904 /* Util.swift */; };
+		04F12F901ED417F100772904 /* DeviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F8F1ED417F100772904 /* DeviceHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +27,15 @@
 		04745ABC1ED3594B00EEA5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04745ABF1ED3594B00EEA5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		04745AC11ED3594B00EEA5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04745AC71ED35D8700EEA5CF /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		04F12F7D1ED3610800772904 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		04F12F7F1ED3616F00772904 /* ShellHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellHandler.swift; sourceTree = "<group>"; };
+		04F12F851ED39C9300772904 /* C.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		04F12F871ED39DE600772904 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		04F12F891ED40FBA00772904 /* ApkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApkHandler.swift; sourceTree = "<group>"; };
+		04F12F8B1ED40FFF00772904 /* Apk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apk.swift; sourceTree = "<group>"; };
+		04F12F8D1ED4116D00772904 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		04F12F8F1ED417F100772904 /* DeviceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +68,19 @@
 		04745AB91ED3594B00EEA5CF /* Bridged */ = {
 			isa = PBXGroup;
 			children = (
+				04F12F8B1ED40FFF00772904 /* Apk.swift */,
+				04F12F891ED40FBA00772904 /* ApkHandler.swift */,
+				04F12F871ED39DE600772904 /* Device.swift */,
+				04F12F8F1ED417F100772904 /* DeviceHandler.swift */,
+				04F12F851ED39C9300772904 /* C.swift */,
+				04F12F7F1ED3616F00772904 /* ShellHandler.swift */,
+				04F12F7D1ED3610800772904 /* Scripts */,
 				04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */,
 				04745ABC1ED3594B00EEA5CF /* Assets.xcassets */,
 				04745ABE1ED3594B00EEA5CF /* MainMenu.xib */,
 				04745AC11ED3594B00EEA5CF /* Info.plist */,
+				04745AC71ED35D8700EEA5CF /* StatusMenuController.swift */,
+				04F12F8D1ED4116D00772904 /* Util.swift */,
 			);
 			path = Bridged;
 			sourceTree = "<group>";
@@ -117,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F12F7E1ED3610800772904 /* Scripts in Resources */,
 				04745ABD1ED3594B00EEA5CF /* Assets.xcassets in Resources */,
 				04745AC01ED3594B00EEA5CF /* MainMenu.xib in Resources */,
 			);
@@ -129,7 +157,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04745AC81ED35D8700EEA5CF /* StatusMenuController.swift in Sources */,
+				04F12F8C1ED40FFF00772904 /* Apk.swift in Sources */,
+				04F12F8A1ED40FBA00772904 /* ApkHandler.swift in Sources */,
+				04F12F8E1ED4116D00772904 /* Util.swift in Sources */,
+				04F12F861ED39C9300772904 /* C.swift in Sources */,
+				04F12F801ED3616F00772904 /* ShellHandler.swift in Sources */,
+				04F12F901ED417F100772904 /* DeviceHandler.swift in Sources */,
 				04745ABB1ED3594B00EEA5CF /* AppDelegate.swift in Sources */,
+				04F12F881ED39DE600772904 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +318,7 @@
 				04745AC61ED3594B00EEA5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

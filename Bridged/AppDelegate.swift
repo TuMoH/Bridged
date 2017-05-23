@@ -10,18 +10,22 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-
+    
+    var devices = [Device]()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        DispatchQueue.global().async {
+            self.devices = DeviceHandler.getDevices()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
-
+    
+    func application(sender: NSApplication, openFile filename: String) -> Bool {
+        print("opening \(filename). If it's an APK we'll show a list of devices")
+        return true
+    }
 
 }
 
