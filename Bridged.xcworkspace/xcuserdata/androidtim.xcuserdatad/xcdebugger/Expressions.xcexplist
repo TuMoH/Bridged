@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "(createServer() -&gt; HttpServer).(closure #2):Server.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

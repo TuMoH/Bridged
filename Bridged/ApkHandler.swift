@@ -20,22 +20,31 @@ class ApkHandler: NSObject {
         self.device = device
     }
     
-    func installAndLaunch(complete:@escaping ()->Void) {
-        let apk = getInfoFromApk()
-        if self.install() {
-            self.launch(apk: apk)
-        }
-    }
-    
     func install() -> Bool {
         print("Installing...")
         
-        let s = ShellHandler(scriptFile: "installApkOnDevice")
+        let app = (NSApplication.shared().delegate as! AppDelegate)
         
-        s.run(arguments: [device.adbId, filepath])
-        print("Installed")
+        DispatchQueue.main.async {
+            app.startAnimatingIcon()
+        }
         
-        return true
+        let s = ShellHandler(scriptFile: "install")
+        s.outputIsVerbose = true
+        let output = s.run(arguments: [device.adbId, filepath])
+        
+        DispatchQueue.main.async {
+            let msg = output?.range(of: "Success") != nil ? "Success" : "Error"
+            app.showNotification(msg, text: output ?? "Unknown error")
+            app.stopAnimatingIcon()
+        }
+        
+        if launchInstalledApp() {
+            let apk = getInfoFromApk()
+            self.launch(apk: apk)
+        }
+        
+        return output == "Success\n"
     }
     
     func uninstallPackageWithName(_ packageName:String) {
@@ -43,7 +52,7 @@ class ApkHandler: NSObject {
         let s = ShellHandler(scriptFile: "uninstallPackageOnDevice")
         let args = [device.adbId, packageName]
         
-        s.run(arguments: args)
+        _ = s.run(arguments: args)
     }
     
     func getInfoFromApk() -> Apk {
@@ -74,9 +83,14 @@ class ApkHandler: NSObject {
             print("apklaunch of \(ac)")
             
             let s = ShellHandler(scriptFile: "launchActivity")
-            let output = s.run(arguments: [device.adbId, ac])
+            _ = s.run(arguments: [device.adbId, ac])
             print("apk done launching")
             print("Running \(apk.appName)")
         }
     }
+    
+    func launchInstalledApp() -> Bool {
+        return UserDefaults.standard.bool(forKey: C.PREF_LAUNCH_INSTALLED_APP)
+    }
+    
 }

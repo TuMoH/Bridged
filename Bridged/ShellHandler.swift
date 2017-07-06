@@ -31,9 +31,15 @@ class ShellHandler: NSObject {
         }
         
         let scriptPath = Bundle.main.path(forResource: scriptFile, ofType: "sh", inDirectory: DIR)
-        let resourcesUrl = NSURL(fileURLWithPath: Bundle.main.path(forResource: "adb", ofType: "", inDirectory: DIR)!).deletingLastPathComponent
+        if scriptPath == nil {
+            print("Script \(scriptFile) not found")
+            return nil
+        }
+        
+        let adbUrl = NSURL(fileURLWithPath: Bundle.main.path(forResource: "adb", ofType: "", inDirectory: DIR)!)
+        let resourcesUrl = adbUrl.deletingLastPathComponent
         let resourcesPath = resourcesUrl?.path
-        let adb = "/Users/androidtim/Library/Android/sdk/platform-tools/adb"
+        let adb = getUserAdbPath() ?? adbUrl.path
         
         let bash = "/bin/bash"
         
@@ -44,7 +50,7 @@ class ShellHandler: NSObject {
         
         var allArguments = [String]()
         allArguments.append(scriptPath!) // $0
-        allArguments.append(adb) // $1
+        allArguments.append(adb!) // $1
         allArguments.append(resourcesPath!) // $2
 
         for arg in args {
@@ -74,11 +80,17 @@ class ShellHandler: NSObject {
             channel = C.NOTIF_NEWDATA
         }
         self.postNotification(message: output, channel: channel)
+        print(output)
         return output
     }
     
     func postNotification(message:String, channel:String) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: channel), object: message)
+    }
+    
+    
+    func getUserAdbPath() -> String? {
+        return UserDefaults.standard.string(forKey: C.PREF_ADB_PATH)
     }
     
 }

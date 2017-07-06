@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Popower.viewDidLoad() -&gt; ():Popower.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "devices">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.applicationDidFinishLaunching(Notification) -&gt; ():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "DeviceHandler.getDevices()[0].adbIdentifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Popower.numberOfRows(in : NSTableView) -&gt; Int:Popower.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "devices.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static DeviceHandler.getDevices() -&gt; [Device]:DeviceHandler.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Popower.tableView(NSTableView, shouldSelectRow : Int) -&gt; Bool:Popower.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "apkForInstall">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShellHandler.run(arguments : [String]) -&gt; String?:ShellHandler.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "scriptPath!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.(applicationDidFinishLaunching(Notification) -&gt; ()).(closure #1):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "DeviceHandler.getDevices()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

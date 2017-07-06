@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F6CD31F01453400074177 /* UIImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F6CD21F01453400074177 /* UIImageRotation.swift */; };
+		045BF6451F04DC0200A2A982 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045BF6431F04DC0200A2A982 /* Preferences.swift */; };
+		045BF6461F04DC0200A2A982 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045BF6441F04DC0200A2A982 /* Preferences.xib */; };
 		04745ABB1ED3594B00EEA5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */; };
-		04745ABD1ED3594B00EEA5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04745ABC1ED3594B00EEA5CF /* Assets.xcassets */; };
 		04745AC01ED3594B00EEA5CF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04745ABE1ED3594B00EEA5CF /* MainMenu.xib */; };
-		04745AC81ED35D8700EEA5CF /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745AC71ED35D8700EEA5CF /* StatusMenuController.swift */; };
+		04746CBC1F0E2A9200490D4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04746CBB1F0E2A9200490D4C /* Images.xcassets */; };
+		04778D2F1EDC8291006E9796 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04778D2E1EDC8291006E9796 /* Server.swift */; };
+		04B4032E1EDC23C500A5F2A1 /* Pods_Bridged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97B1172B789AE7336AB8FA0 /* Pods_Bridged.framework */; };
 		04F12F7E1ED3610800772904 /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = 04F12F7D1ED3610800772904 /* Scripts */; };
 		04F12F801ED3616F00772904 /* ShellHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F7F1ED3616F00772904 /* ShellHandler.swift */; };
 		04F12F861ED39C9300772904 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F851ED39C9300772904 /* C.swift */; };
@@ -19,15 +23,22 @@
 		04F12F8C1ED40FFF00772904 /* Apk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F8B1ED40FFF00772904 /* Apk.swift */; };
 		04F12F8E1ED4116D00772904 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F8D1ED4116D00772904 /* Util.swift */; };
 		04F12F901ED417F100772904 /* DeviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F8F1ED417F100772904 /* DeviceHandler.swift */; };
+		04F12F931ED4A87900772904 /* Popower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F911ED4A87900772904 /* Popower.swift */; };
+		04F12F941ED4A87900772904 /* Popower.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F12F921ED4A87900772904 /* Popower.xib */; };
+		04F12F961ED5723A00772904 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F12F951ED5723A00772904 /* EventMonitor.swift */; };
+		04F5D64D1EDB1B9C00A476AD /* DeviceTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D64C1EDB1B9C00A476AD /* DeviceTableRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040F6CD21F01453400074177 /* UIImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageRotation.swift; sourceTree = "<group>"; };
+		045BF6431F04DC0200A2A982 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		045BF6441F04DC0200A2A982 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		04745AB71ED3594B00EEA5CF /* Bridged.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridged.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04745ABC1ED3594B00EEA5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04745ABF1ED3594B00EEA5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		04745AC11ED3594B00EEA5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04745AC71ED35D8700EEA5CF /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		04746CBB1F0E2A9200490D4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04778D2E1EDC8291006E9796 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		04F12F7D1ED3610800772904 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		04F12F7F1ED3616F00772904 /* ShellHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellHandler.swift; sourceTree = "<group>"; };
 		04F12F851ED39C9300772904 /* C.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
@@ -36,6 +47,13 @@
 		04F12F8B1ED40FFF00772904 /* Apk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apk.swift; sourceTree = "<group>"; };
 		04F12F8D1ED4116D00772904 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		04F12F8F1ED417F100772904 /* DeviceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHandler.swift; sourceTree = "<group>"; };
+		04F12F911ED4A87900772904 /* Popower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popower.swift; sourceTree = "<group>"; };
+		04F12F921ED4A87900772904 /* Popower.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Popower.xib; sourceTree = "<group>"; };
+		04F12F951ED5723A00772904 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		04F5D64C1EDB1B9C00A476AD /* DeviceTableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableRow.swift; sourceTree = "<group>"; };
+		09222E5BD55E1BF41CB14BCA /* Pods-Bridged.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bridged.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bridged/Pods-Bridged.release.xcconfig"; sourceTree = "<group>"; };
+		D97B1172B789AE7336AB8FA0 /* Pods_Bridged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bridged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB7641BFE8B737CBB9D880B /* Pods-Bridged.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bridged.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bridged/Pods-Bridged.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B4032E1EDC23C500A5F2A1 /* Pods_Bridged.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +73,8 @@
 			children = (
 				04745AB91ED3594B00EEA5CF /* Bridged */,
 				04745AB81ED3594B00EEA5CF /* Products */,
+				15221D618E7D3C58245868B5 /* Pods */,
+				DBBA552A53865FA38BA82D9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,21 +89,45 @@
 		04745AB91ED3594B00EEA5CF /* Bridged */ = {
 			isa = PBXGroup;
 			children = (
+				04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */,
 				04F12F8B1ED40FFF00772904 /* Apk.swift */,
 				04F12F891ED40FBA00772904 /* ApkHandler.swift */,
 				04F12F871ED39DE600772904 /* Device.swift */,
 				04F12F8F1ED417F100772904 /* DeviceHandler.swift */,
 				04F12F851ED39C9300772904 /* C.swift */,
 				04F12F7F1ED3616F00772904 /* ShellHandler.swift */,
+				040F6CD21F01453400074177 /* UIImageRotation.swift */,
 				04F12F7D1ED3610800772904 /* Scripts */,
-				04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */,
-				04745ABC1ED3594B00EEA5CF /* Assets.xcassets */,
 				04745ABE1ED3594B00EEA5CF /* MainMenu.xib */,
 				04745AC11ED3594B00EEA5CF /* Info.plist */,
-				04745AC71ED35D8700EEA5CF /* StatusMenuController.swift */,
 				04F12F8D1ED4116D00772904 /* Util.swift */,
+				04F12F911ED4A87900772904 /* Popower.swift */,
+				04F12F921ED4A87900772904 /* Popower.xib */,
+				04F12F951ED5723A00772904 /* EventMonitor.swift */,
+				04F5D64C1EDB1B9C00A476AD /* DeviceTableRow.swift */,
+				04778D2E1EDC8291006E9796 /* Server.swift */,
+				045BF6431F04DC0200A2A982 /* Preferences.swift */,
+				045BF6441F04DC0200A2A982 /* Preferences.xib */,
+				04746CBB1F0E2A9200490D4C /* Images.xcassets */,
 			);
 			path = Bridged;
+			sourceTree = "<group>";
+		};
+		15221D618E7D3C58245868B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCB7641BFE8B737CBB9D880B /* Pods-Bridged.debug.xcconfig */,
+				09222E5BD55E1BF41CB14BCA /* Pods-Bridged.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DBBA552A53865FA38BA82D9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D97B1172B789AE7336AB8FA0 /* Pods_Bridged.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04745AC41ED3594B00EEA5CF /* Build configuration list for PBXNativeTarget "Bridged" */;
 			buildPhases = (
+				59C2F57081ECEDC4C1A93397 /* [CP] Check Pods Manifest.lock */,
 				04745AB31ED3594B00EEA5CF /* Sources */,
 				04745AB41ED3594B00EEA5CF /* Frameworks */,
 				04745AB51ED3594B00EEA5CF /* Resources */,
+				182723CB69B487FDF4356322 /* [CP] Embed Pods Frameworks */,
+				166CA39CEBB2F5C529614248 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,27 +192,82 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F12F941ED4A87900772904 /* Popower.xib in Resources */,
+				04746CBC1F0E2A9200490D4C /* Images.xcassets in Resources */,
 				04F12F7E1ED3610800772904 /* Scripts in Resources */,
-				04745ABD1ED3594B00EEA5CF /* Assets.xcassets in Resources */,
 				04745AC01ED3594B00EEA5CF /* MainMenu.xib in Resources */,
+				045BF6461F04DC0200A2A982 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		166CA39CEBB2F5C529614248 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bridged/Pods-Bridged-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		182723CB69B487FDF4356322 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bridged/Pods-Bridged-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59C2F57081ECEDC4C1A93397 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04745AB31ED3594B00EEA5CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04745AC81ED35D8700EEA5CF /* StatusMenuController.swift in Sources */,
 				04F12F8C1ED40FFF00772904 /* Apk.swift in Sources */,
+				04F5D64D1EDB1B9C00A476AD /* DeviceTableRow.swift in Sources */,
+				040F6CD31F01453400074177 /* UIImageRotation.swift in Sources */,
+				04F12F961ED5723A00772904 /* EventMonitor.swift in Sources */,
 				04F12F8A1ED40FBA00772904 /* ApkHandler.swift in Sources */,
+				04F12F931ED4A87900772904 /* Popower.swift in Sources */,
 				04F12F8E1ED4116D00772904 /* Util.swift in Sources */,
 				04F12F861ED39C9300772904 /* C.swift in Sources */,
+				045BF6451F04DC0200A2A982 /* Preferences.swift in Sources */,
 				04F12F801ED3616F00772904 /* ShellHandler.swift in Sources */,
 				04F12F901ED417F100772904 /* DeviceHandler.swift in Sources */,
 				04745ABB1ED3594B00EEA5CF /* AppDelegate.swift in Sources */,
+				04778D2F1EDC8291006E9796 /* Server.swift in Sources */,
 				04F12F881ED39DE600772904 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +378,13 @@
 		};
 		04745AC51ED3594B00EEA5CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB7641BFE8B737CBB9D880B /* Pods-Bridged.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Bridged/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = timursoft.Bridged;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -288,11 +393,13 @@
 		};
 		04745AC61ED3594B00EEA5CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09222E5BD55E1BF41CB14BCA /* Pods-Bridged.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Bridged/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = timursoft.Bridged;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

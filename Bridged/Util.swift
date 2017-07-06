@@ -10,14 +10,14 @@ import Foundation
 
 class Util: NSObject {
     
-    static func findMatchesInString(_ rawdata:String, regex:String) -> [String]? {
+    static func findMatchesInString(_ rawdata: String, regex: String) -> [String]? {
         do {
             let re = try NSRegularExpression(pattern: regex,
                                              options: NSRegularExpression.Options.caseInsensitive)
             
             let matches = re.matches(in: rawdata,
-                                             options: NSRegularExpression.MatchingOptions.reportProgress,
-                                             range:
+                                     options: NSRegularExpression.MatchingOptions.reportProgress,
+                                     range:
                 NSRange(location: 0, length: rawdata.utf16.count))
             
             if matches.count != 0 {
