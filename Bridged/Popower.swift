@@ -41,14 +41,14 @@ class Popower: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
         if apkForInstall != nil {
+            let path = self.apkForInstall!
+            
             getApp().closePopover(nil)
 
             DispatchQueue.global().async {
-                let apkHandler = ApkHandler(filepath: self.apkForInstall!, device: self.devices[row])
+                let apkHandler = ApkHandler(filepath: path, device: self.devices[row])
 //                _ = apkHandler.installAndLaunch()
                 _ = apkHandler.install()
-                
-                self.apkForInstall = nil
             }
         }
         return true
