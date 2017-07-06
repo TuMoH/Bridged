@@ -47,7 +47,6 @@ class Popower: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
             DispatchQueue.global().async {
                 let apkHandler = ApkHandler(filepath: path, device: self.devices[row])
-//                _ = apkHandler.installAndLaunch()
                 _ = apkHandler.install()
             }
         }
