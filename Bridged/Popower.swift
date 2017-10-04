@@ -15,6 +15,8 @@ class Popower: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
     var devices: [Device] = []
     var apkForInstall: String?
+    var takeScreenshot = false
+    var openFileManager = false
     
     var autoRefresh = false
     
@@ -50,6 +52,21 @@ class Popower: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
                 _ = apkHandler.install()
             }
         }
+        
+        if takeScreenshot {
+            getApp().closePopover(nil)
+            
+            DispatchQueue.global().async {
+                self.devices[row].takeScreenshot()
+            }
+        }
+        
+        if openFileManager {
+            getApp().closePopover(nil)
+            
+            self.devices[row].openFileManager(tableView)
+        }
+        
         return true
     }
     
@@ -71,12 +88,55 @@ class Popower: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func updateTitle() {
-        titleView?.stringValue = apkForInstall == nil ? "Devices" : "Choose device..."
+        if let view = titleView {
+            NSAnimationContext.runAnimationGroup({ (context) -> Void in
+                context.duration = 0.2
+                view.animator().alphaValue = 0
+            }, completionHandler: { () -> Void in
+                view.stringValue = (self.apkForInstall != nil || self.takeScreenshot || self.openFileManager) ? "Choose device..." : "Devices"
+                
+                NSAnimationContext.runAnimationGroup({ (context) -> Void in
+                    context.duration = 0.2
+                    view.animator().alphaValue = 1
+                }, completionHandler: nil)
+            })
+        }
     }
     
     @IBAction func openSettings(_ sender: Any) {
         getApp().openSettings(sender)
-    }    
+    }
+    
+    @IBAction func takeScreenshot(_ sender: Any) {
+        if devices.count == 1 {
+            getApp().closePopover(nil)
+            
+            DispatchQueue.global().async {
+                _ = self.devices[0].takeScreenshot()
+            }
+        } else {
+        	takeScreenshot = true
+        	updateTitle()
+        }
+    }
+    
+    @IBAction func openFileManager(_ sender: Any) {
+        if devices.count == 1 {
+            getApp().closePopover(nil)
+            
+            self.devices[0].openFileManager(sender)
+        } else {
+            takeScreenshot = true
+            updateTitle()
+        }
+    }
+    
+    func reset() {
+        autoRefresh = false
+        apkForInstall = nil
+        takeScreenshot = false
+        openFileManager = false
+    }
     
     func getApp() -> AppDelegate {
         return (NSApplication.shared().delegate as! AppDelegate)

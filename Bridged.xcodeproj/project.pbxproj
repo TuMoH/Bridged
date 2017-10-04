@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		040F6CD31F01453400074177 /* UIImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F6CD21F01453400074177 /* UIImageRotation.swift */; };
+		04106D2F1F8544CF004DB024 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04106D2A1F8544CF004DB024 /* HotKey.swift */; };
+		04106D301F8544CF004DB024 /* HotKeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04106D2B1F8544CF004DB024 /* HotKeysController.swift */; };
+		04106D311F8544CF004DB024 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04106D2C1F8544CF004DB024 /* Key.swift */; };
+		04106D321F8544CF004DB024 /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04106D2D1F8544CF004DB024 /* KeyCombo.swift */; };
+		04106D331F8544CF004DB024 /* NSEventModifierFlags+HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04106D2E1F8544CF004DB024 /* NSEventModifierFlags+HotKey.swift */; };
+		044BBB2A1F6866CA0036520A /* html in Resources */ = {isa = PBXBuildFile; fileRef = 044BBB291F6866CA0036520A /* html */; };
+		044BBB2D1F686A9D0036520A /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044BBB2B1F686A9D0036520A /* FileManager.swift */; };
+		044BBB301F68734C0036520A /* FileManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044BBB2F1F68734C0036520A /* FileManager.xib */; };
 		045BF6451F04DC0200A2A982 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045BF6431F04DC0200A2A982 /* Preferences.swift */; };
 		045BF6461F04DC0200A2A982 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045BF6441F04DC0200A2A982 /* Preferences.xib */; };
 		04745ABB1ED3594B00EEA5CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */; };
@@ -31,6 +39,14 @@
 
 /* Begin PBXFileReference section */
 		040F6CD21F01453400074177 /* UIImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageRotation.swift; sourceTree = "<group>"; };
+		04106D2A1F8544CF004DB024 /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
+		04106D2B1F8544CF004DB024 /* HotKeysController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKeysController.swift; sourceTree = "<group>"; };
+		04106D2C1F8544CF004DB024 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		04106D2D1F8544CF004DB024 /* KeyCombo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCombo.swift; sourceTree = "<group>"; };
+		04106D2E1F8544CF004DB024 /* NSEventModifierFlags+HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSEventModifierFlags+HotKey.swift"; sourceTree = "<group>"; };
+		044BBB291F6866CA0036520A /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		044BBB2B1F686A9D0036520A /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		044BBB2F1F68734C0036520A /* FileManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileManager.xib; sourceTree = "<group>"; };
 		045BF6431F04DC0200A2A982 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		045BF6441F04DC0200A2A982 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		04745AB71ED3594B00EEA5CF /* Bridged.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridged.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04106D291F8544CF004DB024 /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				04106D2A1F8544CF004DB024 /* HotKey.swift */,
+				04106D2B1F8544CF004DB024 /* HotKeysController.swift */,
+				04106D2C1F8544CF004DB024 /* Key.swift */,
+				04106D2D1F8544CF004DB024 /* KeyCombo.swift */,
+				04106D2E1F8544CF004DB024 /* NSEventModifierFlags+HotKey.swift */,
+			);
+			path = HotKey;
+			sourceTree = "<group>";
+		};
 		04745AAE1ED3594B00EEA5CF = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +117,8 @@
 		04745AB91ED3594B00EEA5CF /* Bridged */ = {
 			isa = PBXGroup;
 			children = (
+				04106D291F8544CF004DB024 /* HotKey */,
+				044BBB291F6866CA0036520A /* html */,
 				04745ABA1ED3594B00EEA5CF /* AppDelegate.swift */,
 				04F12F8B1ED40FFF00772904 /* Apk.swift */,
 				04F12F891ED40FBA00772904 /* ApkHandler.swift */,
@@ -109,6 +139,8 @@
 				045BF6431F04DC0200A2A982 /* Preferences.swift */,
 				045BF6441F04DC0200A2A982 /* Preferences.xib */,
 				04746CBB1F0E2A9200490D4C /* Images.xcassets */,
+				044BBB2B1F686A9D0036520A /* FileManager.swift */,
+				044BBB2F1F68734C0036520A /* FileManager.xib */,
 			);
 			path = Bridged;
 			sourceTree = "<group>";
@@ -193,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F12F941ED4A87900772904 /* Popower.xib in Resources */,
+				044BBB2A1F6866CA0036520A /* html in Resources */,
 				04746CBC1F0E2A9200490D4C /* Images.xcassets in Resources */,
 				04F12F7E1ED3610800772904 /* Scripts in Resources */,
+				044BBB301F68734C0036520A /* FileManager.xib in Resources */,
 				04745AC01ED3594B00EEA5CF /* MainMenu.xib in Resources */,
 				045BF6461F04DC0200A2A982 /* Preferences.xib in Resources */,
 			);
@@ -260,14 +294,20 @@
 				040F6CD31F01453400074177 /* UIImageRotation.swift in Sources */,
 				04F12F961ED5723A00772904 /* EventMonitor.swift in Sources */,
 				04F12F8A1ED40FBA00772904 /* ApkHandler.swift in Sources */,
+				04106D301F8544CF004DB024 /* HotKeysController.swift in Sources */,
 				04F12F931ED4A87900772904 /* Popower.swift in Sources */,
+				044BBB2D1F686A9D0036520A /* FileManager.swift in Sources */,
 				04F12F8E1ED4116D00772904 /* Util.swift in Sources */,
 				04F12F861ED39C9300772904 /* C.swift in Sources */,
 				045BF6451F04DC0200A2A982 /* Preferences.swift in Sources */,
+				04106D311F8544CF004DB024 /* Key.swift in Sources */,
 				04F12F801ED3616F00772904 /* ShellHandler.swift in Sources */,
+				04106D2F1F8544CF004DB024 /* HotKey.swift in Sources */,
+				04106D321F8544CF004DB024 /* KeyCombo.swift in Sources */,
 				04F12F901ED417F100772904 /* DeviceHandler.swift in Sources */,
 				04745ABB1ED3594B00EEA5CF /* AppDelegate.swift in Sources */,
 				04778D2F1EDC8291006E9796 /* Server.swift in Sources */,
+				04106D331F8544CF004DB024 /* NSEventModifierFlags+HotKey.swift in Sources */,
 				04F12F881ED39DE600772904 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

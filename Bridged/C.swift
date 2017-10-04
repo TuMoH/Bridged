@@ -14,6 +14,8 @@ class C {
     static let NOTIF_COMMANDVERBOSE = "mj.commandVerbose"
     static let PREF_ADB_PATH = "adbPath"
     static let PREF_LAUNCH_INSTALLED_APP = "launchInstalledApp"
+    static let PREF_SCREENSHOTS_FOLDER = "screenshotsFolder"
+    static let PREF_OPEN_SCREENSHOT = "openScreenshot"
     
     static let VERBOSEOUTPUT = "verboseOutput"
     

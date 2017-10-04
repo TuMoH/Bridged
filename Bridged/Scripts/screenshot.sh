@@ -13,29 +13,21 @@ declare -a arr
 adb=$1 # $1 is the bundle resources path directly from the calling script file
 serial=$3
 screenshotFolder=$4
-activityName=$5
+fileName=$5
+openScreenshot=$6
 
 TakeScreenshot(){
-    deviceName=$("$adb" -s $serial shell getprop ro.product.name)
-    buildId=$("$adb" -s $serial shell getprop ro.build.id)
-    ldap=$(whoami)
-    now=$(date +'%m%d%Y%H%M%S')
-    if [ -n "$activityName" ]; then
-        finalFileName=$activityName-$now.png
-    else
-        finalFileName=$deviceName$buildId$ldap$now.png
-    fi
-    finalFileName="${finalFileName//[$'\t\r\n ']}"
     echo "Taking screenshot of $serial"
 
-    "$adb" -s $serial shell screencap -p /sdcard/$finalFileName
-    "$adb" -s $serial pull /sdcard/$finalFileName
-    "$adb" -s $serial shell rm /sdcard/$finalFileName
+    "$adb" -s $serial shell screencap -p /sdcard/$fileName
+    "$adb" -s $serial pull /sdcard/$fileName
+    "$adb" -s $serial shell rm /sdcard/$fileName
 
-    open $finalFileName
+    if [ $openScreenshot = "true" ]; then
+        open $fileName
+    fi
 }
 
-echo "###### $screenshotFolder"
 mkdir -p "$screenshotFolder"
 cd "$screenshotFolder"
 TakeScreenshot

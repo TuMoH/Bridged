@@ -9,8 +9,6 @@
 import Cocoa
 import Swifter
 
-//import Swifter
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
     
@@ -26,8 +24,32 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     var preferences: Preferences!
     
+    private var hotKeyScreenshot: HotKey? {
+        didSet {
+            guard let hotKey = hotKeyScreenshot else {
+//                pressedLabel.stringValue = "Unregistered"
+                return
+            }
+            
+//            pressedLabel.stringValue = "Registered"
+            
+            hotKey.keyDownHandler = { [weak self] in
+                self?.refreshDevices {
+                    if (self?.devices.count == 1) {
+                        DispatchQueue.global().async {
+                            self?.devices[0].takeScreenshot()
+                        }
+                    } else {
+                        self?.popup?.takeScreenshot = true
+                        self?.showPopover(nil)
+                    }
+                }
+            }
+        }
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        createPopup()
+        initialize()
         NSUserNotificationCenter.default.delegate = self
         
 //        startServer()
@@ -43,9 +65,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
-        createPopup()
+        initialize()
         
-        refreshDevices { 
+        refreshDevices {
             if (self.devices.count == 1) {
                 DispatchQueue.global().async {
                     let apkHandler = ApkHandler(filepath: filename, device: self.devices[0])
@@ -60,6 +82,34 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return true
     }
     
+    func initialize() {
+        checkForPreferences()
+        createPopup()
+
+        registerHotKeys()
+    }
+    
+    func registerHotKeys() {
+        hotKeyScreenshot = HotKey(keyCombo: KeyCombo(key: .s, modifiers: [.control, .shift]))
+    }
+    
+    func unregisterHotKeys() {
+        hotKeyScreenshot = nil
+    }
+    
+    func checkForPreferences() {
+        let ud = UserDefaults.standard
+        
+        if ud.string(forKey: C.PREF_SCREENSHOTS_FOLDER) == nil {
+            var path = NSHomeDirectory()
+            let searchPictures = NSSearchPathForDirectoriesInDomains(.picturesDirectory, .userDomainMask, true)
+            if !searchPictures.isEmpty {
+                path = searchPictures[0]
+            }
+            ud.set(NSString(string: path).expandingTildeInPath, forKey: C.PREF_SCREENSHOTS_FOLDER)
+        }
+    }
+
     func showNotification(_ title: String, text: String) {
         let notification = NSUserNotification()
         
@@ -114,8 +164,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             popover.performClose(sender)
             eventMonitor?.stop()
             
-            popup?.autoRefresh = false
-            popup?.apkForInstall = nil
+            popup?.reset()
         }
     }
     
@@ -162,20 +211,29 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     
+    var animQueue = 0
     var animReverse = false
     var animTimer: Timer? = nil
     var animFrame = 0
     
     func startAnimatingIcon() {
-        animFrame = 0
-        updateImageIcon()
-        animTimer = Timer.scheduledTimer(timeInterval: 1/10, target: self, selector: #selector(updateImageIcon), userInfo: nil, repeats: true)
+        if animQueue <= 0 {
+        	animFrame = 0
+        	updateImageIcon()
+        	animTimer = Timer.scheduledTimer(timeInterval: 1/10, target: self, selector: #selector(updateImageIcon), userInfo: nil, repeats: true)
+        }
+        animQueue += 1
     }
     
     func stopAnimatingIcon() {
-        setDefaultStatusIcon()
-        animTimer?.invalidate()
-        animTimer = nil
+        animQueue -= 1
+        
+        if animQueue <= 0 {
+        	setDefaultStatusIcon()
+        	animTimer?.invalidate()
+        	animTimer = nil
+            animQueue = 0
+        }
     }
     
     func updateImageIcon() {

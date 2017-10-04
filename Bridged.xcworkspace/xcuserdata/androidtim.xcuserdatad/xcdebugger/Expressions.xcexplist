@@ -5,5 +5,13 @@
       <ContextState
          contextName = "(createServer() -&gt; HttpServer).(closure #2):Server.swift">
       </ContextState>
+      <ContextState
+         contextName = "Popower.updateTitle() -&gt; ():Popower.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(apkForInstall == nil || !takeScreenshot) ? &quot;Devices&quot; : &quot;Choose device...&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
